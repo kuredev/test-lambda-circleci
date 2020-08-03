@@ -17,3 +17,10 @@ workflows:
   welcome3:
     jobs:
       - welcome/run
+  welcome4:
+    docker:
+      - image: circleci/ruby:2.6.5
+    steps:
+      - checkout
+      - run: echo "hogehoge"
+      - run: ruby -v
