@@ -18,6 +18,7 @@ jobs:
       - checkout
       - run: ls
       - run: pwd
+      - run: rspec
 workflows:
   # Name the workflow "welcome"
   welcome:
