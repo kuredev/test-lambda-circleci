@@ -11,6 +11,14 @@ jobs:
       - image: circleci/ruby:2.6.5
     steps:
       - run: echo "hellooooooo"
+  spec:
+    docker:
+      - image: circleci/ruby:2.6.5
+    steps:
+      - checkout
+      - run: ls
+      - run: pwd
+      - run: rspec
 workflows:
   # Name the workflow "welcome"
   welcome:
@@ -20,9 +28,9 @@ workflows:
   welcome2:
     jobs:
       - welcome/run
-  welcome3:
-    jobs:
-      - welcome/run
-  welcome4:
+  tset-jobs:
     jobs:
       - myjob
+  spec:
+    jobs:
+      - spec
