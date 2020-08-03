@@ -24,7 +24,5 @@ workflows:
     jobs:
       - welcome/run
   welcome4:
-    docker:
-      - image: circleci/ruby:2.6.5
     jobs:
       - myjob
